@@ -1,0 +1,88 @@
+<html>
+<head>
+	<meta charset = "UTF-8">
+	<title>Product Wishlist Management System</title>
+	<link rel="stylesheet" type="text/css" href="pwms_style.css"> 
+</head>
+<body>
+	<header>
+		<div id="main-header">
+			<br>
+			<a href="index.html"><h1>Product Wishlist management system</h1></a>			
+			<ul class="login-reg">
+				<li><a href="login.html">Login</a></li>
+				<li><a href="register.html">Register</a></li>
+			</ul>
+			<br>
+		</div>
+
+	</header>
+	<nav id="navbar" align ="center">
+		<div class="container">
+			<ul class="categories">
+				<li><a href="wishlist.html#electronics">Electronics</a></li>
+				<li><a href="wishlist.html#clothes">Clothes</a></li>
+				<li><a href="wishlist.html#pantry">Pantry</a></li>
+				<li><a href="wishlist.html#sports">Sports</a></li>
+				<li><a href="wishlist.html#footwear">Footwear</a></li>
+				<li><a href="wishlist.html#home">Home Applicances and Furniture</a></li>
+				<li><a href="wishlist.html#industrial">Industry</a></li>
+				<li><a href="wishlist.html#books">Books</a></li>
+				<li><a href="wishlist.html#entertainment">Movies, Music and Games</a></li>
+				<li><a href="wishlist.html#kids">Toys</a></li>
+			</ul>
+		</div>
+	</nav>
+	<section>
+		<fieldset class="container">
+		<legend><h1>New Wishlist</h1></legend>
+		<div>
+			<div class="my-form">
+				<form action=" " method="post">
+					<div class="form-group>
+						<label for="prodname"><h4>Name of the Product:</h4></label>
+						<input type="text" id="prodname" placeholder="Earphones" name="prodname">
+					</div>
+					<div class="form-group>
+						<label for="desc"><h4>Description: </h4></label>
+						<textarea name="desc" placeholder="Type somethin'" id="desc"></textarea>
+					</div>
+					<div class="form-group>
+						<label for="quan"><h4>Quantity: </h4></label>
+						<input type="number" id="quan" placeholder="2" name="quan" min="1">
+					</div>
+					<div class="form-group>
+						<label for="price"><h4>Price: </h4></label>
+						<input type="number" id="price" placeholder="$1000" name="price" min="1">
+					</div>
+					<div class="form-group">
+						<label for="category"><h4>Category </h4></label>
+						<select name="category" id="category">
+							<option value="elec">Electronics</option>
+							<option value="clothes">Clothes</option>
+							<option value="pantry">Pantry</option>
+							<option value="sports">Sports</option>
+							<option value="footwear">Footwear</option>
+							<option value="home">Home Applicances and Furniture</option>
+							<option value="industrial">Industry</option>
+							<option value="books">Books</option>
+							<option value="entertainment">Movies, Music and Games</option>
+							<option value="kids">Toys and kids clothes</option>
+						</select>
+					</div>
+					<br>
+					<button type="submit">Submit</button>
+					<button type="reset">Cancel</button>
+				</form>
+				<br>
+			</div>
+		</div>
+		</fieldset>
+		<br>
+	</section>
+	<br>
+	<footer id="main-footer">
+		<p>Copyright &copy; 2022 Product Wishlist Management System</p>
+	</footer>
+</body>
+</html>

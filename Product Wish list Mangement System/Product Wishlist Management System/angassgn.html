@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+	<head>
+		<title>My first angular JS app</title>
+		<meta charset="UTF-8">
+		<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+	</head>
+	<body ng-app="myApp">
+	<div ng-controller="op">
+		<input type="text" ng-model="food" placeholder="Enter the items you eat for lunch" required>
+		<p>{{result()}}  {{rslt}}</p>
+	</div>
+	</body>
+	<script>
+		var app=angular.module("myApp",[]);
+		app.controller("op",function($scope){
+			var fc=$scope.food.split(',').length;
+			alert("hello");
+			var msg="Enjoy";
+			$scope.result=function(){
+				return $scope.rslt=msg;
+			};
+		});
+	</script>
+</html>
