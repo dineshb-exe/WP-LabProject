@@ -5,46 +5,30 @@
 	<title>Login</title>
 	<link rel="stylesheet" type="text/css" href="pwms_style.css">
 </head>
-<body>
-	<header>
-		<div id="main-header">
-			<br>
-			<a href="index.html"><h1>Product Wishlist management system</h1></a>			
-			<ul class="login-reg">
-				<li><a href="login.html">Login</a></li>
-				<li><a href="register.html">Register</a></li>
-			</ul>
-			<br>
-		</div>
-
-	</header>
-	<nav id="navbar" align ="center">
-		<div class="container">
-			<ul class="categories">
-				<li><a href="wishlist.html#electronics">Electronics</a></li>
-				<li><a href="wishlist.html#clothes">Clothes</a></li>
-				<li><a href="wishlist.html#pantry">Pantry</a></li>
-				<li><a href="wishlist.html#sports">Sports</a></li>
-				<li><a href="wishlist.html#footwear">Footwear</a></li>
-				<li><a href="wishlist.html#home">Home Applicances and Furniture</a></li>
-				<li><a href="wishlist.html#industrial">Industry</a></li>
-				<li><a href="wishlist.html#books">Books</a></li>
-				<li><a href="wishlist.html#entertainment">Movies, Music and Games</a></li>
-				<li><a href="wishlist.html#kids">Toys</a></li>
-			</ul>
-		</div>
-	</nav>
-	<section class="my-form" align="center" style="background-color:#8AFF8A;">
+<body ng-app="pwms">
+	<section class="my-form" align="center">
 		<br>
 		<h2>Login Here</h2>
-		<form action="" method="post">
+		<form name="login" action="" method="post">
 			<div class="form-group">
-				<label for="uname"><h3>Username:</h3></label>
-				<input type="text" id="uname" name="uname" required> 
+				<label for="uname"><h3>Email ID:</h3></label>
+				<input type="email" id="uname" name="uname" ng-model="uname" required> 
+				<span ng-show="login.uname.$touched && login.uname.$invalid">
+					<img height="20" width="20" src="../Images/cross_mark.png">
+				</span>
+				<span ng-show="login.uname.$valid" ng-hide="login.uname.$invalid">
+					<img height="20" width="20" src="../Images/check_mark.png">
+				</span>
 			</div>
 			<div class="form-group">
 				<label for="pwd"><h3>Password:</h3></label>
-				<input type="password" id="pwd" name="pwd" required> 
+				<input type="password" id="pwd" name="pwd" ng-model="pwd" required>
+				<span ng-show="login.pwd.$touched && login.pwd.$invalid">
+					<img height="20" width="20" src="../Images/cross_mark.png">
+				</span>
+				<span ng-show="login.pwd.$valid" ng-hide="login.pwd.$invalid">
+					<img height="20" width="20" src="../Images/check_mark.png">
+				</span> 
 			</div>
 			<br>
 			<button type="submit" name="submit">Login</button>
@@ -52,4 +36,7 @@
 		<br>
 	</section>
 </body>
+<script>
+	app=angular.module("pwms",[]);
+</script>
 </html>
