@@ -7,7 +7,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular-route.js"></script>
 </head>
-<body ng-app="pwms"style="font-family:Arial">
+<body ng-app="pwms"style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">
 	<header>
 		<div id="main-header">
 			<br>
@@ -49,17 +49,17 @@
 		<div class="container">
 			<h2>Choose one</h2>
 			<div class="row">
-				<div class="column">
+				<div class="row-child">
 					<a href="#!/new">
-						<div class="box" id="create">
+						<div class="box">
 							<h3>Create a wishlist</h3>
 							<img src="../Images/np3.webp" height="75" width="75">
 						</div>
 					</a>
-				<div>
-				<div class="column">
-					<a href="edit_wishlist.html">
-						<div class="box" id="edit">
+				</div>
+				<div class="row-child">
+					<a href="#!/edit">
+						<div class="box">
 							<h3>Edit a current wishlist</h3>
 							<img src="../Images/np2.png" height="75" width="75">
 						</div>
@@ -83,6 +83,9 @@
 			})
 			.when("/wishlist", {
 				templateUrl : "wishlist.html"
+			})
+			.when("/edit", {
+				templateUrl : "edit_wishlist.html"
 			})
 			.when("/login", {
 				templateUrl : "login.html"
