@@ -174,12 +174,11 @@ input[type=url] {
 	border-radius: 4px;
 }
 .products{
-	border-collapse: collapse;
-	width: 80%;
-
+	width: 70%;
 }
 .products td, .products th {
 	border: 1px solid #ddd;
+	border-radius: 5px;
 	padding: 8px;
 	color: #056889;
   }
@@ -201,8 +200,8 @@ input[type=url] {
     -225deg,
     #75f6ff 0%,
     #00ff95 29%,
-    #5ed1ff 67%,
-    #9f55ee 100%
+    #f5d742 67%,
+    #eb9310 100%
   );
   background-size: auto auto;
   background-clip: border-box;

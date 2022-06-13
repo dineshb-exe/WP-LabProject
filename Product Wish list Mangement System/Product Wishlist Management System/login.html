@@ -23,10 +23,10 @@
 			<div class="form-group">
 				<label for="pwd"><h3>Password:</h3></label>
 				<input type="password" id="pwd" name="pwd" ng-model="pwd" required>
-				<span ng-show="login.pwd.$touched && login.pwd.$invalid">
+				<span ng-show="login.pwd.$touched && (login.pwd.$invalid ||pwd.length<8)">
 					<img height="20" width="20" src="../Images/cross_mark.png">
 				</span>
-				<span ng-show="login.pwd.$valid" ng-hide="login.pwd.$invalid">
+				<span ng-show="login.pwd.$valid && pwd.length>=8" ng-hide="login.pwd.$invalid ||pwd.length<8">
 					<img height="20" width="20" src="../Images/check_mark.png">
 				</span> 
 			</div>
